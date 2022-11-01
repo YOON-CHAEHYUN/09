@@ -5,18 +5,21 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int i;
+	int i, average;
+	int sum;
 	int grade[SIZE];
 	
-	printf("%d명의 점수를 입력하세요. \n", SIZE);
+	sum=0;
 	
-	for(i=0;i<SIZE;i++)
-		scanf("%d", &grade[i]);
-	
-	for (i=0;i<SIZE;i++){
-		printf("grade[%d]=%d\n",i,grade[i]);
-	}
 
+	for(i=0;i<SIZE;i++){
+		printf("힉생 성적을  입력하세요: ");
+		scanf("%d", &grade[i]);
+		sum+=grade[i];
+	}
+	
+	average=sum/SIZE;
+	printf("성적평균: %d\n",average);
 	
 	return 0;
 }
